@@ -1,9 +1,8 @@
 /**
  * Created by Amit on 19/04/2016.
  */
-
-var PORT = 80;
-var https = require('https');
+var http = require('http');
+var port = 8888;
 
 function onRequest(request, response){
     console.log("Neura has made a request: " + request.url);
@@ -13,4 +12,6 @@ function onRequest(request, response){
     }
 }
 
-https.createServer(onRequest).listen(PORT);
+http.createServer(onRequest).listen(8888);
+console.log("Server is now running...");
+console.log("Listening to port " + port);
