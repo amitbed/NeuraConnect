@@ -9,6 +9,7 @@ function onRequest(request, response){
     if (request.method == 'POST'){
         response.writeHead(200, {"Content-Type": "application/json"});
         console.log(request.name);
+        response.end();
     }
 }
 
